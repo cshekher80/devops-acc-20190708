@@ -1,0 +1,4 @@
+    1  history 
+    2  apt-get update; apt-get install default-jdk -y
+    3  java --version
+    4  history > Day2.txt 

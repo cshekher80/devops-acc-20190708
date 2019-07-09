@@ -1,0 +1,112 @@
+    1  apt-get update -y 
+    2  apt-get install git -y 
+    3  ls
+    4  mkdir  mypojectrepo
+    5  cd mypojectrepo/
+    6  ls
+    7  git init 
+    8  ls 
+    9  ls -a
+   10  echo "Welcome to Git Demo" > helloworld.txt
+   11  cat helloworld.txt 
+   12  git status 
+   13  git add .
+   14  ls -a 
+   15  git status 
+   16  git log 
+   17  git logs
+   18  git log
+   19  git commit -m "My Initial Hello World File"
+   20  git config --global --edit
+   21  git log
+   22  cat helloworld.txt 
+   23  echo "Test - 1" >> helloworld.txt 
+   24  cat helloworld.txt 
+   25  git status 
+   26  git add . ; git commit -m "Second Commit"
+   27  git log
+   28  rm -rf helloworld.txt 
+   29  echo "Hello World" > README.md
+   30  git status 
+   31  git add .
+   32  git status 
+   33  git log 
+   34  git commit -m "Demo3: Helloworld.txt has been removed & README.md has been introduced."
+   35  git log 
+   36  ls
+   37  git checkout HEAD~1
+   38  ls
+   39  git log 
+   40  git branch 
+   41  git checkout master
+   42  git log
+   43  echo "Apple Pie" | git hash-object --stdin -w
+   44  echo "Amit Vashist" | git hash-object --stdin -w
+   45  git cat-file c42fe628543c9f330ea51dea312d32cd72d7f454 -p 
+   46  git cat-file 23991897e13e47ed0adb91a0082c31c82fe0cbe5 -p 
+   47  ls
+   48  cd mypojectrepo/
+   49  ls
+   50  git log 
+   51  git diff HEAD~1..HEAD~2
+   52  git branch
+   53  git branch production
+   54  git branch features/test_function_07
+   55  git branch
+   56  git log 
+   57  git branch
+   58  git checkout features/test_function_07
+   59  ls
+   60  cat README.md 
+   61  echo  "New Feature for Sprint-07" > sprint_07
+   62  git add . 
+   63  git commit -m "New File sprint_07"
+   64  git log 
+   65  git checkout production
+   66  ls
+   67  echo "Welcome to Production Branch" > Prod.txt
+   68  git ci
+   69  git commit -m "New File in Prod Branch"
+   70  git log 
+   71  git log --help
+   72  git log --graph 
+   73  ls
+   74  echo "Test 3" >> Prod.txt 
+   75  git log --graph 
+   76  git branch 
+   77  git merge features/test_function_07 
+   78  ls
+   79  git brach 
+   80  git branch
+   81  ls
+   82  git log --graph 
+   83  git checkout master
+   84  ls
+   85  git branch
+   86  git add . 
+   87  git status 
+   88  git commit -m "Prod file has been updated"
+   89  git checkout master
+   90  git merge production
+   91  ls
+   92  git log --graph 
+   93  ls
+   94  git branch
+   95  git log --graph 
+   96  git add remote origin https://github.com/amitvashist7/devops-acc-20190708.git
+   97  git add origin https://github.com/amitvashist7/devops-acc-20190708.git
+   98  git remote  add origin https://github.com/amitvashist7/devops-acc-20190708.git
+   99  git pull 
+  100  ls
+  101  cat README.md 
+  102  git push origin master
+  103  git pull 
+  104  git pull origin master
+  105  ls
+  106  git push origin master
+  107  git push origin master --force
+  108  git push origin production --force
+  109  history 
+  110  git logs
+  111  git branch
+  112  git push origin features/test_function_07 --force
