@@ -1,0 +1,6 @@
+node {
+    git 'https://github.com/amitvashist7/devops-acc-20190708.git'
+
+    sh label: 'Packaging', script: 'mvn clean package -f atmosphere/spring-boot-samples/spring-boot-sample-atmosphere/pom.xml'
+    
+}
