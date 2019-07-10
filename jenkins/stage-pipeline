@@ -1,0 +1,27 @@
+node {
+    
+stage('SCM Checkout') {
+    git 'https://github.com/amitvashist7/devops-acc-20190708.git'
+
+}
+def project_path = "atmosphere/spring-boot-samples/spring-boot-sample-atmosphere/"
+
+dir(project_path) {
+    
+    stage('Clean Old Package') {
+    sh label: 'Clean', script: 'mvn clean'
+    }
+    
+    stage('Package Build') {
+    
+    sh label: 'Packaging', script: 'mvn package'
+    }
+    
+    stage('Archive ArtiFacts') {
+    
+    archiveArtifacts 'target/*.jar'
+}
+        
+}
+
+}
