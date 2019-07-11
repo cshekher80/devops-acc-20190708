@@ -10,5 +10,8 @@ RUN apt-get update
 # Install Apache Packages
 RUN apt-get install apache2 -y 
 
+# Custom WebPage
+COPY helloworld.html /var/www/html/hello.html
+
 # RUN the Service 
 CMD ["/usr/sbin/apache2ctl", "-D", "FOREGROUND"]
