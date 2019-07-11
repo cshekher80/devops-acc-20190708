@@ -1,0 +1,122 @@
+    1  cat /root/.jenkins/secrets/initialAdminPassword
+    2  apt-get update; apt-get install openjdk-8-jdk maven -y 
+    3  java -version 
+    4  mvn --version 
+    5  git clone https://github.com/amitvashist7/devops-acc-20190708.git
+    6  history 
+    7  cd devops-acc-20190708/atmosphere/spring-boot-samples/spring-boot-sample-atmosphere/
+    8  ls
+    9  mvn package 
+   10  cd
+   11  cd - 
+   12  ls
+   13  cd target/
+   14  ls
+   15  java -jar spring-boot-sample-atmosphere-1.4.0.BUILD-SNAPSHOT.jar
+   16  ls
+   17  cd 
+   18  ls
+   19  wget  http://mirrors.jenkins.io/war-stable/latest/jenkins.war
+   20  ls
+   21  java -jar jenkins.war --httpPort=9090
+   22  ls
+   23  java -jar jenkins.war --httpPort=9090
+   24  cat /root/.jenkins/secrets/initialAdminPassword
+   25  ps -ef | grep -i jenkins 
+   26  java -jar jenkins.war --httpPort=9090
+   27  java -jar jenkins.war --httpPort=9090 & 
+   28  cat /etc/apt/sources.list
+   29  d
+   30  system status docker
+   31  system status docker.service
+   32  systemctl status docker.service
+   33  docker version 
+   34  docker images
+   35  docker pull ubuntu 
+   36  docker pull centos
+   37  docker images
+   38  cat /etc/*-release
+   39  docker run -it ubuntu 
+   40  docker ps 
+   41  docker run -it ubuntu 
+   42  docker ps 
+   43  docker ps -a
+   44  docker ps 
+   45  docker attach e1c8947bebe9
+   46  docker run -it --name test-01 ubuntu 
+   47  docker ps 
+   48  docker attach test-01
+   49  docker ps 
+   50  docker attach test-01
+   51  docker ps -a 
+   52  docker attach test-01
+   53  docker start test-01
+   54  docker ps 
+   55  docker attach test-01
+   56  apt-get update -y 
+   57  apt-get install     apt-transport-https     ca-certificates     curl     gnupg-agent     software-properties-common -y 
+   58  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+   59  sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   60     $(lsb_release -cs) \
+   61     stable"
+   62  apt-get update; apt-get install docker-ce docker-ce-cli containerd.io
+   63  history 
+   64  docker version 
+   65  docker ps 
+   66  docker attach test-01
+   67  docker ps --a
+   68  docker ps -a
+   69  ip addr 
+   70  docker ps 
+   71  docker inspect test-01
+   72  curl 172.17.0.2
+   73  curl localhost
+   74  docker run -it --name test-02 -p 8081:80 ubuntu:16.04
+   75  netstat -tulnp 
+   76  curl localhost:8081
+   77  netstat -tulnp
+   78  docker ps 
+   79  iptables -L
+   80  docker ps 
+   81  netstat -tulnp
+   82  ls
+   83  docker ps 
+   84  docker kill $(docker ps -qa)
+   85  docker ps 
+   86  cd devops-acc-20190708/
+   87  ls
+   88  mkdir docker
+   89  cd docker/
+   90  ls
+   91  mkdir apache
+   92  ls
+   93  cd apache/
+   94  ls
+   95  vim Dockerfile
+   96  docker build  -t myapache:v1 -f Dockerfile .
+   97  docker images 
+   98  docker run -d --name mytest-apache-01 -p 8081:80 myapache:v1
+   99  docker ps 
+  100  cd ..
+  101  git add . 
+  102  git commit -m "Dockerfile"
+  103  ls
+  104  cd apache/
+  105  ls
+  106  du -sh Dockerfile 
+  107  docker images 
+  108  git push orgin master 
+  109  git push origin master 
+  110  git pull
+  111  git push origin master 
+  112  ls
+  113  vim helloworld.html
+  114  ls
+  115  vim Dockerfile 
+  116  docker build  -t myapache:v2 .
+  117  docker images
+  118  docker run -d --name mytest-apache-02 -p 8082:80 myapache:v2
+  119  docker ps 
+  120  git add . 
+  121  ls
+  122  history > docker_build_history.txt
