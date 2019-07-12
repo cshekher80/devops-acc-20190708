@@ -1,0 +1,33 @@
+---
+
+- hosts: dc
+  sudo: yes
+  
+  tasks:
+  - name: Install HTTPD Packages On CentOS
+    yum: name=httpd state=present
+    when: ansible_os_family == "RedHat"
+
+  - name: Start HTTP Service on CentOS OS 
+    service: name=httpd state=started
+    when: ansible_os_family == "RedHat"
+
+
+  - name: Install Apache Packages On Ubuntu OS
+    apt: name=apache2 state=present
+    when: ansible_os_family == "Debian"
+
+  - name: Start Apache Service on Ubuntu OS 
+    service: name=apache2 state=started
+    when: ansible_os_family == "Debian"
+
+
+- hosts: db
+  sudo: yes
+  
+  tasks:
+  - name: Install Mariadb Packages On Ubuntu OS
+    apt: name=mariadb-server state=present
+
+  - name: Start Mariadb Service on Ubuntu OS 
+    service: name=mysql state=started

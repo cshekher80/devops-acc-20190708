@@ -1,0 +1,163 @@
+    1  cat /root/.jenkins/secrets/initialAdminPassword
+    2  apt-get update; apt-get install openjdk-8-jdk maven -y 
+    3  java -version 
+    4  mvn --version 
+    5  git clone https://github.com/amitvashist7/devops-acc-20190708.git
+    6  history 
+    7  cd devops-acc-20190708/atmosphere/spring-boot-samples/spring-boot-sample-atmosphere/
+    8  ls
+    9  mvn package 
+   10  cd
+   11  cd - 
+   12  ls
+   13  cd target/
+   14  ls
+   15  java -jar spring-boot-sample-atmosphere-1.4.0.BUILD-SNAPSHOT.jar
+   16  ls
+   17  cd 
+   18  ls
+   19  wget  http://mirrors.jenkins.io/war-stable/latest/jenkins.war
+   20  ls
+   21  java -jar jenkins.war --httpPort=9090
+   22  ls
+   23  java -jar jenkins.war --httpPort=9090
+   24  cat /root/.jenkins/secrets/initialAdminPassword
+   25  ps -ef | grep -i jenkins 
+   26  java -jar jenkins.war --httpPort=9090
+   27  java -jar jenkins.war --httpPort=9090 & 
+   28  cat /etc/apt/sources.list
+   29  d
+   30  system status docker
+   31  system status docker.service
+   32  systemctl status docker.service
+   33  docker version 
+   34  docker images
+   35  docker pull ubuntu 
+   36  docker pull centos
+   37  docker images
+   38  cat /etc/*-release
+   39  docker run -it ubuntu 
+   40  docker ps 
+   41  docker run -it ubuntu 
+   42  docker ps 
+   43  docker ps -a
+   44  docker ps 
+   45  docker attach e1c8947bebe9
+   46  docker run -it --name test-01 ubuntu 
+   47  docker ps 
+   48  docker attach test-01
+   49  docker ps 
+   50  docker attach test-01
+   51  docker ps -a 
+   52  docker attach test-01
+   53  docker start test-01
+   54  docker ps 
+   55  docker attach test-01
+   56  apt-get update -y 
+   57  apt-get install     apt-transport-https     ca-certificates     curl     gnupg-agent     software-properties-common -y 
+   58  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+   59  sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   60     $(lsb_release -cs) \
+   61     stable"
+   62  apt-get update; apt-get install docker-ce docker-ce-cli containerd.io
+   63  history 
+   64  docker version 
+   65  docker ps 
+   66  docker attach test-01
+   67  docker ps --a
+   68  docker ps -a
+   69  ip addr 
+   70  docker ps 
+   71  docker inspect test-01
+   72  curl 172.17.0.2
+   73  curl localhost
+   74  docker run -it --name test-02 -p 8081:80 ubuntu:16.04
+   75  netstat -tulnp 
+   76  curl localhost:8081
+   77  netstat -tulnp
+   78  docker ps 
+   79  iptables -L
+   80  docker ps 
+   81  netstat -tulnp
+   82  ls
+   83  docker ps 
+   84  docker run -it ubuntu 
+   85  docker ps 
+   86  docker commit -p -m "My Test Commit" 4e8a56bf9f6f mytest-commit-image:v1
+   87  docker images 
+   88  docker run -it mytest-commit-image:v1 
+   89  ls
+   90  docker ps 
+   91  docker kill $(docker ps -qa)
+   92  docker ps 
+   93  cd devops-acc-20190708/
+   94  ls
+   95  mkdir docker
+   96  cd docker/
+   97  ls
+   98  mkdir apache
+   99  ls
+  100  cd apache/
+  101  ls
+  102  vim Dockerfile
+  103  docker build  -t myapache:v1 -f Dockerfile .
+  104  docker images 
+  105  docker run -d --name mytest-apache-01 -p 8081:80 myapache:v1
+  106  docker ps 
+  107  cd ..
+  108  git add . 
+  109  git commit -m "Dockerfile"
+  110  ls
+  111  cd apache/
+  112  ls
+  113  du -sh Dockerfile 
+  114  docker images 
+  115  git push orgin master 
+  116  git push origin master 
+  117  git pull
+  118  git push origin master 
+  119  ls
+  120  vim helloworld.html
+  121  ls
+  122  vim Dockerfile 
+  123  docker build  -t myapache:v2 .
+  124  docker images
+  125  docker run -d --name mytest-apache-02 -p 8082:80 myapache:v2
+  126  docker ps 
+  127  git add . 
+  128  ls
+  129  history > docker_build_history.txt
+  130  git add .
+  131  git commit -m "Dockerfile Update2 with Custom Page"
+  132  git push origin master
+  133  cd devops-acc-20190708/
+  134  ls
+  135  git add .
+  136  git commit -m "Docker-Compse"
+  137  ls
+  138  cd atmosphere/
+  139  ls
+  140  cd spring-boot-samples/
+  141  ls
+  142  cd spring-boot-sample-atmosphere/
+  143  ls
+  144  mvn clean
+  145  cd ../
+  146  git add .
+  147  git commit -m "Docker-Compse"
+  148  git push origin master
+  149  history 
+  150  ls
+  151  cd ../../
+  152  ls
+  153  cd docker/docker-compose/
+  154  ls
+  155  docker ps 
+  156  ls
+  157  cd ../
+  158  ls
+  159  cd ../
+  160  ls
+  161  cd docker/apache/
+  162  ls
+  163  history > docker_build_history.txt 
